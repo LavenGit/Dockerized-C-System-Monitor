@@ -1,0 +1,15 @@
+name: C System Monitor CI
+on:
+  push:
+  pull_request:
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile with warnings
+        run: make
+      - name: Run unit and CLI tests
+        run: make test
+      - name: Test Docker resource limits
+        run: sh tests/test_docker.sh
