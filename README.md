@@ -147,17 +147,6 @@ sh tests/test_docker.sh
 
 These tests check container memory limits, CPU quotas, and non-root execution.
 
-## 🔄 Continuous Integration
-
-The project uses **GitHub Actions** to automatically:
-
-1. Compile the C program.
-2. Run automated Python tests.
-3. Build the Docker image.
-4. Run Docker integration tests.
-
-The workflow is defined in `.github/workflows/ci.yml` and runs when changes are pushed or pull requests are opened.
-
 ## 📚 What I Learned
 
 Through this project, I gained hands-on experience with:
